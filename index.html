@@ -1,23 +1,47 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Get My Coords</title>
-    </head>
-    <body>
-        <div class="container">
-            <div id="getIt">Get My Coords</div>
-            <div class="long hds">Longitude</div>
-            <div class="long ds"></div>
-            <div class="lat hds">Latitude</div>
-            <div class="lat ds"></div>
-
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>A jQWidgets mobile application, which demonstrates PhoneGap's Geolocation API.
+    </title>
+    <link rel="Stylesheet" type="text/css" href="css/jqx.base.css" />
+    <style type="text/css">
+        .label
+        {
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jqxcore.js"></script>
+    <script type="text/javascript" src="js/jqxtabs.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true&amp;libraries=places"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            app.initialize();
+        });
+    </script>
+</head>
+<body>
+    <div class="app">
+        <div id="jqxTabs">
+            <ul style='margin-left: 20px;'>
+                <li>Location Map</li>
+                <li>Location Details</li>
+            </ul>
+            <div>
+                <div id="map" style="width: 350px; height: 320px;">
+                </div>
+            </div>
+            <div>
+                <div id="details">
+                    <span class="label">Latitude: </span><span id="latitude"></span>;
+                    <br />
+                    <span class="label">Longitude: </span><span id="longitude"></span>.
+                </div>
+            </div>
         </div>
-        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+    </div>
+</body>
 </html>
