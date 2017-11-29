@@ -42,7 +42,7 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
-    <gap:plugin name="org.apache.cordova.geolocation" />
+    <plugin name="cordova-plugin-geolocation" spec="~3.0.0" />
 
     <!-- Define app icon for each platform. This is a relative path to config.xml.
         For e.g. if you place an icon.png inside res folder, you should modify the
